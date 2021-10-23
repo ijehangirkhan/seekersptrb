@@ -210,7 +210,7 @@ input {
 
 .nav__logo {
   font-weight: var(--font-semi-bold);
-  margin-right: var(--mb-0-75);
+  margin-right: var(--mb-0-25);
 }
 
 .nav__toggle {
