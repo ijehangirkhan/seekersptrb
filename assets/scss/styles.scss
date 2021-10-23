@@ -202,7 +202,9 @@ input{
     justify-content: space-between;
     align-items: center;
 
-    &__logo,
+    &__logo{
+        margin-right: var(--mb-0-75);
+    }
     &__toggle{
         color: var(--white-color);
     }
@@ -824,9 +826,6 @@ input{
     .conact__container{
         padding: 0;
     }
-    .nav__logo {
-        margin-right: var(--mb-0-5);
-      }
 }
 
 /* For medium devices */
@@ -854,9 +853,6 @@ input{
         grid-template-columns: .6fr;
         justify-content: center;
     }
-    .nav__logo {
-        margin-right: var(--mb-0-5);
-      }
 }
 
 @media screen and (min-width: 768px){

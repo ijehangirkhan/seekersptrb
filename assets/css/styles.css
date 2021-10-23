@@ -210,6 +210,7 @@ input {
 
 .nav__logo {
   font-weight: var(--font-semi-bold);
+  margin-right: var(--mb-0-75);
 }
 
 .nav__toggle {
@@ -856,9 +857,6 @@ input {
   .contact__container {
     padding: 0;
   }
-  .nav__logo {
-    margin-right: var(--mb-0-5);
-  }
 }
 
 /* For medium devices */
@@ -879,9 +877,6 @@ input {
     display: grid;
     grid-template-columns: .6fr;
     justify-content: center;
-  }
-  .nav__logo {
-    margin-right: var(--mb-0-5);
   }
 }
 
