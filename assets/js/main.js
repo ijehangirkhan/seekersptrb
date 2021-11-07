@@ -38,50 +38,37 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*==================== SWIPER DISCOVER ====================*/
-let swiper = new Swiper(".discover__container", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    loop: true,
-    spaceBetween: 32,
-    coverflowEffect: {
-        rotate: 0,
-    },
-})
-
 /*==================== VIDEO ====================*/
-const videoFile = document.getElementById('video-file'),
-      videoButton = document.getElementById('video-button'),
-      videoIcon = document.getElementById('video-icon')
+// const videoFile = document.getElementById('video-file'),
+//       videoButton = document.getElementById('video-button'),
+//       videoIcon = document.getElementById('video-icon')
 
-function playPause(){ 
-    if (videoFile.paused){
-        // Play video
-        videoFile.play()
-        // We change the icon
-        videoIcon.classList.add('ri-pause-line')
-        videoIcon.classList.remove('ri-play-line')
-    }
-    else {
-        // Pause video
-        videoFile.pause(); 
-        // We change the icon
-        videoIcon.classList.remove('ri-pause-line')
-        videoIcon.classList.add('ri-play-line')
+// function playPause(){ 
+//     if (videoFile.paused){
+//         // Play video
+//         videoFile.play()
+//         // We change the icon
+//         videoIcon.classList.add('ri-pause-line')
+//         videoIcon.classList.remove('ri-play-line')
+//     }
+//     else {
+//         // Pause video
+//         videoFile.pause(); 
+//         // We change the icon
+//         videoIcon.classList.remove('ri-pause-line')
+//         videoIcon.classList.add('ri-play-line')
 
-    }
-}
-videoButton.addEventListener('click', playPause)
+//     }
+// }
+// videoButton.addEventListener('click', playPause)
 
-function finalVideo(){
-    // Video ends, icon change
-    videoIcon.classList.remove('ri-pause-line')
-    videoIcon.classList.add('ri-play-line')
-}
-// ended, when the video ends
-videoFile.addEventListener('ended', finalVideo)
+// function finalVideo(){
+//     // Video ends, icon change
+//     videoIcon.classList.remove('ri-pause-line')
+//     videoIcon.classList.add('ri-play-line')
+// }
+// // ended, when the video ends
+// videoFile.addEventListener('ended', finalVideo)
 
 
 /*==================== SHOW SCROLL UP ====================*/ 
@@ -121,9 +108,10 @@ const sr = ScrollReveal({
 
 
 sr.reveal(`.home__data, .home__social-link, .home__info,
-           .discover__container,
+           .discover__container, .card_image,
            .experience__data, .experience__overlay,
            .place__card,
+           .services__data,
            .sponsor__content,
            .footer__data, .footer__rights`,{
     origin: 'top',
@@ -149,6 +137,13 @@ sr.reveal('.contact__input',{interval: 200});
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
+// const systemColorScheme = "light"
+
+// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+//     systemColorScheme = e.matches ? "dark" : "light";
+// });
+
+// document.body.classList[systemColorScheme === 'dark' ? 'remove' : 'add'](darkTheme)
 
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
