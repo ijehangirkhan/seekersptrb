@@ -729,6 +729,7 @@ input {
   padding: .5rem;
   display: flex;
   justify-content: space-between;
+  border-radius: 0.5rem;
 }
 
 .subscribe__input {
@@ -955,7 +956,6 @@ input {
   .subscribe__form {
     width: 470px;
     margin: 0 auto;
-    border-radius: 0.5rem;
   }
   .contact__container {
     display: grid;
